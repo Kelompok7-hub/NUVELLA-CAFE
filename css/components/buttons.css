@@ -1,0 +1,30 @@
+/* Tombol dan spinner loading */
+/* ---------- Tombol ---------- */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 48px; padding: 0 22px;
+  border: 1px solid transparent; border-radius: 999px;
+  font: 600 0.9375rem/1 var(--font-body);
+  text-decoration: none; white-space: nowrap; cursor: pointer;
+  transition: background-color 160ms var(--ease), transform 120ms var(--ease), border-color 160ms var(--ease), box-shadow 200ms var(--ease);
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 6px 16px rgba(42, 33, 28, 0.12); }
+.btn:active { transform: scale(0.97); }
+.btn:focus-visible, a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--espresso); outline-offset: 3px; }
+.btn--primary { background: var(--espresso); color: #fff; }
+.btn--primary:hover { background: var(--espresso-hover); }
+.btn--lg { min-height: 56px; padding: 0 32px; font-size: 1rem; }
+.btn--block { width: 100%; }
+.btn--secondary { background: transparent; border-color: var(--line); color: var(--ink); }
+.btn--secondary:hover { border-color: var(--ink); }
+.btn--whatsapp { background: transparent; border-color: var(--line); color: var(--wa); }
+.btn--whatsapp:hover { border-color: var(--wa); }
+.btn[disabled] { opacity: 0.7; cursor: progress; }
+
+.link-arrow { font-weight: 600; font-size: 0.9375rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-thickness: 1px; }
+
+/* Spinner / loading */
+.spinner { display: none; width: 18px; height: 18px; border-radius: 50%; border: 2px solid currentColor; border-right-color: transparent; animation: spin 700ms linear infinite; }
+.is-loading .spinner { display: inline-block; }
+.is-loading .btn__label, .is-loading .add-btn__icon { display: none; }
+@keyframes spin { to { transform: rotate(360deg); } }

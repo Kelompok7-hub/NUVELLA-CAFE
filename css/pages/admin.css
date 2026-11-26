@@ -1,0 +1,24 @@
+/* Halaman admin pesanan */
+.adm-login { max-width: 460px; }
+.adm-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin: 14px 0 18px; }
+.adm-bar .tabs { margin: 0; }
+.adm-bar__actions { display: flex; gap: 10px; }
+.adm-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 18px; align-items: start; }
+.adm-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; padding: 18px; display: grid; gap: 12px; border-left-width: 6px; }
+.adm-card--s0 { border-left-color: #b3261e; }
+.adm-card--s1 { border-left-color: #d9962b; }
+.adm-card--s2 { border-left-color: #3f8a4f; }
+.adm-card--s3 { border-left-color: #8d7b6a; opacity: .85; }
+.adm-card__head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.adm-card__code { font-family: var(--font-display); font-size: 1.25rem; }
+.adm-card__head small { margin-left: auto; color: var(--muted); }
+.adm-badge { font-size: .75rem; font-weight: 700; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--espresso); }
+.adm-card__meta { display: grid; gap: 4px; font-size: .9375rem; }
+.adm-card__meta p { margin: 0; }
+.adm-card__meta b { display: inline-block; min-width: 82px; color: var(--muted); font-weight: 600; }
+.adm-card__meta a { color: var(--espresso); font-weight: 600; }
+.adm-stages { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.adm-stage { min-height: 42px; padding: 0 10px; font-size: .875rem; }
+.adm-stage[aria-pressed="true"] { background: var(--espresso); border-color: var(--espresso); color: #fff; }
+.adm-del { justify-self: start; background: none; border: 0; padding: 4px 0; color: var(--danger); font: 600 .875rem var(--font-body); cursor: pointer; text-decoration: underline; }
+.adm-bar .tabs { background: none; padding: 0; box-shadow: none; }

@@ -1,0 +1,54 @@
+/* Variabel warna/font, reset, tipografi dasar, .container */
+/* =========================================================
+   Nuvella Caffe — style.css (versi animasi)
+   ========================================================= */
+:root {
+  --bg: #f4e3c3;
+  --surface: #fbefd8;
+  --ink: #1f140d;
+  --muted: #4a3628;
+  --line: #d2b283;
+  --espresso: #3d2a1f;
+  --espresso-hover: #2a1c14;
+  --accent: #8a5a3c;
+  --accent-soft: #f1e3d0;
+  --danger: #b3261e;
+  --danger-soft: #fbeceb;
+  --wa: #6b4a35;
+  --radius: 14px;
+  --ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --font-display: "Playfair Display", "Fraunces", Georgia, serif;
+  --font-brand: "Playfair Display", "Cormorant Garamond", Georgia, serif;
+  --font-brand-sub: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+  --topbar-h: 64px;
+  --bottomnav-h: 64px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink);
+  background: var(--bg);
+  padding-bottom: var(--bottomnav-h);
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+h1, h2, h3 { margin: 0; line-height: 1.15; }
+p { margin: 0; }
+svg { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex-shrink: 0; }
+[hidden] { display: none !important; }
+
+.container { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 20px; }
+
+/* ---------- Tipografi ---------- */
+.display { font-family: var(--font-display); font-weight: 500; font-size: clamp(2.5rem, 7vw, 4.5rem); letter-spacing: -0.02em; }
+.page-title { font-family: var(--font-display); font-weight: 500; font-size: clamp(2rem, 5vw, 3rem); letter-spacing: -0.015em; }
+.section-title { font-family: var(--font-display); font-weight: 500; font-size: 1.5rem; }
+.lead { color: var(--muted); font-size: 1.0625rem; max-width: 38rem; }
+.eyebrow { font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); }

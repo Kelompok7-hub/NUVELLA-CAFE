@@ -1,0 +1,45 @@
+/* Tablet >= 640px, desktop >= 960px, dan kurangi-animasi */
+/* =========================================================
+   Tablet ≥ 640px
+   ========================================================= */
+@media (min-width: 640px) {
+  .container { padding: 0 32px; }
+  .tabs { margin: 0 -32px; padding-left: 32px; padding-right: 32px; }
+  .steps { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+  .steps li { grid-template-columns: 1fr; row-gap: 12px; }
+  .steps__num { grid-row: auto; }
+  .cart-btn__label { display: inline; }
+  .cart-btn { padding: 0 16px; }
+  .menu-item { grid-template-columns: 92px 1fr auto auto; gap: 20px; }
+  .menu-item__thumb { width: 92px; height: 92px; }
+  .field-grid { grid-template-columns: 1fr 1fr; }
+  .about-pillars { grid-template-columns: repeat(3, 1fr); }
+  .footer__inner { grid-template-columns: 1fr 1fr; }
+}
+
+/* =========================================================
+   Desktop ≥ 960px
+   ========================================================= */
+@media (min-width: 960px) {
+  body { padding-bottom: 0; }
+  :root { --topbar-h: 72px; }
+  .bottomnav { display: none; }
+  .topnav { display: flex; }
+  .cart-btn { margin-left: 0; }
+  .toasts { left: auto; right: 24px; top: calc(var(--topbar-h) + 16px); bottom: auto; width: 380px; }
+  .hero { grid-template-columns: 1.1fr 0.9fr; gap: 72px; padding-top: 96px; padding-bottom: 128px; }
+  .hero__media { aspect-ratio: 4 / 5; }
+  .favorites { margin-top: 48px; padding-top: 88px; }
+  .page-head { padding-top: 80px; padding-bottom: 40px; }
+  .page { padding-bottom: 128px; }
+  .about-story__card { grid-template-columns: 1.2fr 0.8fr; padding: 40px; }
+  .checkout, .status { grid-template-columns: 1fr 380px; gap: 64px; }
+  .summary { position: sticky; top: calc(var(--topbar-h) + 24px); }
+  .footer__inner { grid-template-columns: 1.1fr 1.1fr 1fr; gap: 48px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; transition-duration: 1ms !important; animation-delay: 0s !important; }
+  html { scroll-behavior: auto; }
+  .fx { display: none; }
+}

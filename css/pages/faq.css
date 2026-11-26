@@ -1,0 +1,15 @@
+/* Halaman FAQ (accordion) */
+/* ---------- FAQ ---------- */
+.faq { display: grid; gap: 48px; max-width: 760px; margin-left: auto; margin-right: auto; }
+.faq__group { display: grid; gap: 4px; }
+.faq__group h2 { font-family: var(--font-display); font-weight: 500; font-size: 1.375rem; margin-bottom: 8px; }
+.acc { border-bottom: 1px solid var(--line); }
+.acc__btn { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 18px 0; background: none; border: 0; text-align: left; cursor: pointer; font: 500 1rem/1.4 var(--font-body); color: var(--ink); }
+.acc__btn svg { transition: transform 200ms var(--ease); }
+.acc__btn[aria-expanded="true"] svg { transform: rotate(45deg); }
+.acc__panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 220ms var(--ease); }
+.acc__panel > div { overflow: hidden; }
+.acc__panel p { color: var(--muted); padding-bottom: 20px; max-width: 40rem; }
+.acc.is-open .acc__panel { grid-template-rows: 1fr; }
+.faq-cta { max-width: 760px; margin: 56px auto 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding-top: 32px; border-top: 1px solid var(--line); }
+.faq-cta p { font-weight: 600; }

@@ -1,0 +1,16 @@
+/* Footer, lokasi, dan jam operasional */
+/* ---------- Footer & Lokasi ---------- */
+.footer { border-top: 1px solid var(--line); padding: 56px 0 32px; background: var(--surface); }
+.footer__inner { display: grid; gap: 40px; align-items: start; }
+.footer__brand { display: grid; gap: 10px; max-width: 22rem; }
+.footer__brand p { color: var(--muted); font-size: 0.9375rem; }
+.location__address { display: grid; gap: 14px; justify-items: start; }
+.address { font-size: 1.125rem; line-height: 1.5; color: var(--ink); }
+.footer__actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 4px; }
+.location__hours { display: grid; gap: 12px; }
+.hours { width: 100%; border-collapse: collapse; }
+.hours td { padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 0.9375rem; }
+.hours td:last-child { text-align: right; font-variant-numeric: tabular-nums; }
+.hours tr.is-today td { font-weight: 600; }
+.hours tr.is-today td:first-child::after { content: " · hari ini"; font-weight: 500; color: var(--accent); }
+.footer__copy { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 0.8125rem; color: var(--muted); }

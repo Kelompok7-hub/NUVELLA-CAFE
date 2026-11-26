@@ -1,0 +1,56 @@
+/* Navigasi atas (topbar) dan navigasi bawah (HP) */
+/* ---------- Navigasi atas ---------- */
+.topbar {
+  position: sticky; top: 0; z-index: 30;
+  background: rgba(244, 227, 195, 0.96);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+  animation: slideDown 600ms var(--ease) both;
+}
+@keyframes slideDown { from { transform: translateY(-100%); opacity: 0; } }
+.topbar__inner { display: flex; align-items: center; gap: 20px; height: var(--topbar-h); }
+.brand { display: inline-flex; align-items: baseline; gap: 7px; text-decoration: none; }
+.brand__name { font-family: var(--font-brand); font-style: italic; font-weight: 600; font-size: 1.7rem; letter-spacing: -0.01em; color: var(--espresso); }
+.brand__suffix { font-family: var(--font-brand-sub); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.22em; color: var(--accent); }
+.topnav { display: none; gap: 4px; margin: 0 auto; flex-wrap: wrap; }
+.topnav a {
+  padding: 8px 13px; border-radius: 999px; text-decoration: none;
+  font-size: 0.9rem; color: var(--muted); font-weight: 500;
+  transition: color 150ms var(--ease), background-color 150ms var(--ease), transform 150ms var(--ease);
+}
+.topnav a:hover { color: var(--ink); transform: translateY(-1px); }
+.topnav a.is-active { color: var(--ink); background: var(--surface); box-shadow: inset 0 0 0 1px var(--line); }
+
+.cart-btn {
+  margin-left: auto; position: relative;
+  display: inline-flex; align-items: center; gap: 8px;
+  height: 44px; padding: 0 12px; border-radius: 999px;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  font: 600 0.875rem var(--font-body); cursor: pointer; text-decoration: none;
+  transition: border-color 150ms var(--ease), transform 120ms var(--ease);
+}
+.cart-btn:hover { border-color: var(--ink); }
+.cart-btn:active { transform: scale(0.96); }
+.cart-btn__label { display: none; }
+.cart-btn__count { min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; background: var(--espresso); color: #fff; font-size: 0.75rem; display: inline-flex; align-items: center; justify-content: center; }
+.cart-btn__count.bump { animation: bump 360ms var(--ease); }
+.cart-btn.wiggle svg { animation: wiggle 500ms var(--ease); }
+@keyframes bump { 50% { transform: scale(1.4); } }
+@keyframes wiggle { 20% { transform: rotate(-14deg); } 50% { transform: rotate(12deg); } 80% { transform: rotate(-6deg); } }
+
+/* ---------- Navigasi bawah (HP) ---------- */
+.bottomnav {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  height: var(--bottomnav-h);
+  display: grid; grid-template-columns: repeat(6, 1fr);
+  background: var(--surface); border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bottomnav a {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 3px;
+  font-size: 0.625rem; font-weight: 500; color: var(--muted); text-decoration: none;
+  transition: color 150ms var(--ease);
+}
+.bottomnav a svg { transition: transform 240ms var(--ease); }
+.bottomnav a.is-active { color: var(--espresso); font-weight: 600; }
+.bottomnav a.is-active svg { transform: translateY(-3px) scale(1.15); }

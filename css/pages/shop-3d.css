@@ -1,0 +1,33 @@
+/* Kedai Nuvella 3D dan hero beranda diperbesar */
+/* =========================================================
+   KEDAI NUVELLA 3D (Tentang Kami)
+   ========================================================= */
+.shop3d-wrap { display: grid; gap: 32px; align-items: center; margin-bottom: 64px; }
+.shop3d {
+  position: relative; height: 440px; border-radius: 28px; overflow: hidden; border: 1px solid var(--line);
+  background: linear-gradient(#efdcc3 0%, #f7ecd9 64%, #d2b283 64%, #c9a27c 100%);
+  box-shadow: 0 24px 50px rgba(42, 33, 28, 0.16); perspective: 1300px; perspective-origin: 50% 30%;
+  touch-action: pan-y; cursor: grab;
+}
+.shop3d__caption { display: grid; gap: 16px; justify-items: start; }
+.shop3d__caption > p:not(.eyebrow) { color: var(--muted); max-width: 34rem; }
+.shop3d__list { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; width: 100%; }
+.shop3d__list li { display: flex; align-items: center; gap: 14px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); transition: transform 240ms var(--ease), box-shadow 240ms var(--ease); }
+.shop3d__list li:hover { transform: translateX(6px); box-shadow: 0 10px 22px rgba(42, 33, 28, 0.1); }
+.shop3d__list li > span { font-size: 1.6rem; }
+.shop3d__list strong { display: block; font-size: 0.95rem; }
+.shop3d__list small { color: var(--muted); font-size: 0.8125rem; }
+
+@media (min-width: 960px) { .shop3d-wrap { grid-template-columns: 1.15fr 0.85fr; gap: 56px; } .shop3d { height: 500px; } }
+@media (max-width: 520px) { .shop3d { height: 380px; } }
+
+/* =========================================================
+   BERANDA: gambar hero diperbesar (animasi tetap sama)
+   ========================================================= */
+.hero__media { aspect-ratio: 1 / 1; }
+.fx--big.fx--steam i { width: 26px; height: 110px; filter: blur(9px); }
+@media (min-width: 960px) {
+  .hero { grid-template-columns: 0.8fr 1.2fr; gap: 48px; padding-top: 72px; padding-bottom: 112px; }
+  .hero__media { aspect-ratio: 1 / 1; }
+}
+@media (max-width: 959px) { .hero__media { aspect-ratio: 1 / 1; } }

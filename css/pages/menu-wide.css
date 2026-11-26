@@ -1,0 +1,36 @@
+/* Menu samping + gambar besar */
+/* =========================================================
+   MENU SAMPINGAN + GAMBAR BESAR
+   ========================================================= */
+.menu-list { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.menu-item__thumb { height: auto; aspect-ratio: 1 / 1; }
+.menu-item__name { font-size: 1.1rem; }
+
+@media (max-width: 759px) {
+  .menu-item { grid-template-areas: "thumb thumb" "info info" "price add"; padding: 10px 10px 12px; border-radius: 18px; gap: 8px; align-items: center; }
+  .menu-item__name { font-size: 0.95rem; line-height: 1.25; }
+  .menu-item__desc { font-size: 0.78rem; display: -webkit-box; -webkit-line-clamp: 2; line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .menu-item__price { justify-self: start; font-size: 1.05rem; }
+  .add-btn { width: 40px; height: 40px; }
+}
+@media (min-width: 760px) {
+  .menu-list { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .menu-item { padding: 16px 16px 20px; }
+  .menu-item__thumb { aspect-ratio: 5 / 4.4; }
+  .menu-item__name { font-size: 1.2rem; }
+}
+
+/* ---------- Pita menu berjalan ---------- */
+.marquee { overflow: hidden; margin: 0 0 80px; padding: 16px 0; background: linear-gradient(90deg, var(--espresso), #5a3b2a, var(--espresso)); color: #f6ede2; transform: rotate(-1.5deg) scale(1.03); box-shadow: 0 14px 30px rgba(42, 33, 28, 0.25); }
+.marquee__track { display: flex; align-items: center; gap: 36px; width: max-content; animation: marq 30s linear infinite; font: italic 500 1.35rem var(--font-display); white-space: nowrap; padding-right: 36px; }
+.marquee__track i { color: #e2c29b; font-style: normal; }
+@keyframes marq { to { transform: translateX(-50%); } }
+
+/* ---------- Muncul 3D saat di-scroll ---------- */
+.reveal {
+  opacity: 0; translate: 0 50px; scale: 0.92;
+  transition: transform 180ms ease-out, box-shadow 300ms var(--ease),
+    opacity 800ms var(--ease) var(--rd, 0ms), translate 800ms var(--ease) var(--rd, 0ms), scale 800ms var(--ease) var(--rd, 0ms);
+}
+.reveal.in { opacity: 1; translate: none; scale: 1; }
+@media (prefers-reduced-motion: reduce) { .marquee__track { animation: none; } .reveal { opacity: 1; translate: none; scale: 1; } }

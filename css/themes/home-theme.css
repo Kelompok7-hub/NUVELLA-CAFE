@@ -1,0 +1,224 @@
+/* Tema beranda: banner, promo, kenapa Nuvella, langkah, CTA */
+/* ===== Beranda: banner penuh, palet champagne beige + dusty rose + putih ===== */
+.page[data-page="beranda"] { background: linear-gradient(180deg, #f7e8cf 0%, #f1dcb8 55%, #fbefd8 100%); padding-bottom: 40px; }
+.banner { position: relative; min-height: calc(100vh - var(--topbar-h)); min-height: calc(100svh - var(--topbar-h)); display: grid; align-items: center; overflow: hidden; }
+.banner__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.banner__veil { position: absolute; inset: 0; background: linear-gradient(100deg, rgba(243,229,211,.96) 0%, rgba(227,212,197,.82) 48%, rgba(255,255,255,.18) 100%); }
+.banner__inner { position: relative; display: grid; gap: 22px; justify-items: start; padding-top: 48px; padding-bottom: 110px; }
+.banner__inner .display { color: #785838; }
+.banner__inner .lead { color: #6f5a54; }
+.banner .btn--primary { background: linear-gradient(135deg, #be9a76, #b48a60); box-shadow: 0 8px 20px rgba(180,138,96,.35); }
+.banner .btn--secondary { background: rgba(255,255,255,.85); border-color: #d8c2ac; color: #785838; }
+.banner__chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.banner__chips span { padding: 8px 16px; border-radius: 999px; background: rgba(255,255,255,.88); color: #785838; font-size: .875rem; font-weight: 600; box-shadow: 0 4px 12px rgba(180,138,96,.15); }
+.banner__wave { position: absolute; left: 0; bottom: -1px; width: 100%; height: 70px; }
+.promo-wrap { margin-top: 8px; }
+.promo { display: flex; align-items: center; gap: 18px; padding: 22px 26px; border-radius: 24px; background: linear-gradient(120deg, #efd9b4, #e5cfa8 60%, #fff); border: 1px solid #d9c09a; box-shadow: 0 10px 26px rgba(180,138,96,.14); }
+.promo__icon { font-size: 2.2rem; line-height: 1; }
+.promo__title { margin: 0; font-family: var(--font-display); font-size: 1.35rem; font-weight: 600; color: #946c45; }
+.promo__text { margin: 4px 0 0; color: #6f5a54; }
+.page[data-page="beranda"] .favorites { margin-top: 0; padding-top: 48px; border-top: 0; }
+.page[data-page="beranda"] .favorites .section-title::after { background: linear-gradient(90deg, #c7a888, #e8c9a8); }
+.page[data-page="beranda"] .link-arrow { color: #b48a60; }
+.page[data-page="beranda"] .menu-item__thumb { height: 200px; }
+.page[data-page="beranda"] .menu-item__img { object-fit: cover; animation: none; filter: sepia(.14) saturate(.95) contrast(1.02); }
+.page[data-page="beranda"] .menu-item__imgwrap { border: 1px solid #d9c09a; background: #efd9b4; }
+.page[data-page="beranda"] .menu-item .fx { display: none; }
+@media (max-width: 759px) {
+  .banner__veil { background: linear-gradient(180deg, rgba(244,224,186,.95), rgba(228,203,155,.88)); }
+}
+.banner__wave path { stroke: none; fill: #f7e8cf; }
+.banner .hero__open { color: #b48a60; }
+
+/* ===== Beranda: full lebar layar + maskot ===== */
+.banner__inner { max-width: none; padding-left: clamp(20px, 6vw, 96px); padding-right: clamp(20px, 6vw, 96px); }
+.page[data-page="beranda"] > .container { max-width: none; padding-left: clamp(16px, 3vw, 48px); padding-right: clamp(16px, 3vw, 48px); }
+.novella-home { background: linear-gradient(120deg, #efd9b4, #eee1d3 60%, #fff); padding: 40px clamp(16px, 6vw, 96px); }
+.novella-home__inner { display: flex; align-items: center; justify-content: center; gap: clamp(20px, 5vw, 64px); flex-wrap: wrap; }
+.mascot--home { width: clamp(150px, 22vw, 240px); cursor: default; flex: none; }
+.novella-home__text { max-width: 34rem; display: grid; gap: 10px; color: #6f5a54; }
+.novella-home__text .eyebrow { color: #b48a60; }
+.novella-home__text .section-title { color: #785838; margin: 0; }
+.novella-home__text p { margin: 0; }
+.page[data-page="beranda"] .promo-wrap { padding: 0; margin: 0; max-width: none; }
+.page[data-page="beranda"] .promo { border-radius: 0; border-left: 0; border-right: 0; box-shadow: none; justify-content: center; padding: 26px clamp(16px, 6vw, 96px); }
+.page[data-page="beranda"] .class-wrap { padding-left: 0; padding-right: 0; max-width: none; }
+.page[data-page="beranda"] .class-card { border-radius: 0; border-left: 0; border-right: 0; box-shadow: none; padding: 40px clamp(16px, 6vw, 96px); }
+
+/* ===== Laptop: menu atas & footer ikut full lebar; tulisan beranda dibuat tebal ===== */
+.topbar__inner { max-width: none; padding-left: clamp(16px, 3vw, 48px); padding-right: clamp(16px, 3vw, 48px); }
+.footer__inner { max-width: none; padding-left: clamp(16px, 6vw, 96px); padding-right: clamp(16px, 6vw, 96px); }
+.page[data-page="beranda"] .display { font-weight: 700; }
+.page[data-page="beranda"] .section-title { font-weight: 700; }
+.page[data-page="beranda"] .lead,
+.page[data-page="beranda"] p,
+.page[data-page="beranda"] .menu-item__desc { font-weight: 600; }
+.page[data-page="beranda"] .menu-item__name,
+.page[data-page="beranda"] .promo__title { font-weight: 700; }
+.page[data-page="beranda"] .eyebrow { font-weight: 700; }
+
+/* ===== Beranda: bagian tambahan ===== */
+.why, .steps { padding-top: 56px; display: grid; gap: 14px; }
+.why .section-title, .steps .section-title { color: #785838; margin: 0; }
+.why .eyebrow, .steps .eyebrow { color: #b48a60; }
+.why__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 20px; margin-top: 10px; }
+.why__card { padding: 26px; border-radius: 22px; background: #fbefd8; border: 1px solid #dcc6a0; box-shadow: 0 8px 22px rgba(180,138,96,.10); display: grid; gap: 8px; align-content: start; }
+.why__card h3, .steps__list h3 { margin: 0; font-size: 1.1rem; font-weight: 700; color: #785838; }
+.why__card p, .steps__list p { margin: 0; color: #6f5a54; }
+.why__icon { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; font-size: 1.5rem; background: linear-gradient(135deg, #efd9b4, #e5cfa8); }
+.steps__list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+.steps__list li { display: flex; gap: 16px; align-items: flex-start; padding: 22px; border-radius: 22px; background: linear-gradient(120deg, #efd9b4, #f2e1c4); border: 1px solid #dcc6a0; }
+.steps__num { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: #fff; background: #b48a60; }
+.cta-band { margin-top: 56px; background: linear-gradient(120deg, #c7a888, #b48a60); color: #fff; padding: 44px clamp(16px, 6vw, 96px); }
+.cta-band__inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
+.cta-band__title { margin: 0 0 6px; font-family: var(--font-display); font-size: clamp(1.6rem, 3.5vw, 2.2rem); font-weight: 700; color: #fff; }
+.cta-band p { margin: 0; font-weight: 600; color: #fff; }
+.cta-band__actions { display: flex; gap: 12px; flex-wrap: wrap; }
+.cta-band__btn { background: #fff; color: #946c45; border: 2px solid #fff; }
+.cta-band__btn--ghost { background: transparent; color: #fff; }
+
+/* ===== Beranda: tambahan isi ===== */
+.home-steps, .home-why { padding: 56px clamp(16px, 6vw, 96px) 8px; display: grid; gap: 26px; }
+.home-why { background: linear-gradient(180deg, transparent, #f4ece3); padding-bottom: 56px; }
+.hsteps { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: 1fr; }
+.hsteps li { display: flex; gap: 16px; align-items: flex-start; padding: 22px; border-radius: 20px; background: #fbefd8; border: 1px solid #d9c09a; box-shadow: 0 8px 22px rgba(180,138,96,.1); }
+.hsteps__no { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: linear-gradient(135deg, #c7a888, #b48a60); color: #fff; font-weight: 700; }
+.hsteps p { margin: 0; color: #6f5a54; font-weight: 600; }
+.hsteps b { display: block; color: #785838; font-size: 1.05rem; margin-bottom: 4px; }
+.why-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+.why-card { padding: 26px; border-radius: 22px; background: #fff; border: 1px solid #ddc49e; box-shadow: 0 8px 22px rgba(180,138,96,.1); display: grid; gap: 8px; }
+.why-card span { font-size: 2rem; line-height: 1; }
+.why-card h3 { margin: 0; font-family: var(--font-display); color: #785838; font-weight: 700; }
+.why-card p { margin: 0; color: #6f5a54; font-weight: 600; }
+@media (min-width: 760px) { .hsteps, .why-grid { grid-template-columns: repeat(3, 1fr); } }
+
+/* ===== Tema beranda v2: champagne beige + dusty rose + putih ===== */
+.banner { background: #f6e7d4; }
+.banner__slides { position: absolute; inset: 0; }
+.banner__slide { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0; animation: bannerFade 24s infinite; }
+.banner__slide:nth-child(1) { animation-delay: -1s; }
+.banner__slide:nth-child(2) { animation-delay: 5s; }
+.banner__slide:nth-child(3) { animation-delay: 11s; }
+.banner__slide:nth-child(4) { animation-delay: 17s; }
+@keyframes bannerFade { 0% { opacity: 0; transform: scale(1.03); } 6% { opacity: 1; } 25% { opacity: 1; } 31% { opacity: 0; } 100% { opacity: 0; transform: scale(1.12); } }
+@media (prefers-reduced-motion: reduce) { .banner__slide { animation: none; } .banner__slide:first-child { opacity: 1; } }
+.banner__veil { background: linear-gradient(100deg, rgba(246,226,190,.93) 0%, rgba(226,200,150,.66) 48%, rgba(255,255,255,.04) 100%); }
+.page[data-page="beranda"] { background: linear-gradient(180deg, #f7e8cf 0%, #f6e8d0 55%, #fff 100%); }
+.banner__inner .display { color: #8a6641; }
+.banner__inner .lead, .banner .hero__open { color: #785839; }
+.banner .btn--primary, .page[data-page="beranda"] .btn--primary { background: linear-gradient(135deg, #d7c0a9, #ba936c); box-shadow: 0 8px 20px rgba(186,147,108,.35); color: #fff; }
+.banner .btn--secondary { border-color: #d7c0a9; color: #8a6641; }
+.banner__chips span { color: #8a6641; }
+.banner__wave path { fill: #f7e8cf; }
+.page[data-page="beranda"] .eyebrow { color: #ba936c; }
+.page[data-page="beranda"] .section-title { color: #8a6641; }
+.page[data-page="beranda"] .section-title::after { background: linear-gradient(90deg, #d7c0a9, #f3cf9f); }
+.page[data-page="beranda"] .lead, .page[data-page="beranda"] p { color: #785839; }
+
+.novella-home { background: linear-gradient(120deg, #f1d4a8, #e0c8a0 55%, #d3b88f); }
+.novella-home__text .section-title { color: #735536; }
+.novella-home__text .eyebrow { color: #735536; }
+.novella-home__text p { color: #674c31; }
+.mascot--home { cursor: pointer; }
+.mascot-wrap { position: relative; }
+.home-bubble { display: inline-block; justify-self: start; padding: 8px 16px; border-radius: 16px; background: #fff; box-shadow: 0 6px 16px rgba(115,85,54,.18); color: #735536 !important; }
+.home-bubble.pop { animation: bubblePop .45s var(--ease); }
+@keyframes bubblePop { 0% { transform: scale(.8); } 60% { transform: scale(1.08); } 100% { transform: scale(1); } }
+
+.promo-band { padding: 56px clamp(16px, 6vw, 96px); background: #f5e0ba; display: grid; gap: 26px; }
+.promo-grid { display: grid; gap: 16px; grid-template-columns: 1fr; }
+.promo-card { padding: 24px; border-radius: 22px; background: #fff; border: 1px solid #e0c9a4; box-shadow: 0 10px 24px rgba(186,147,108,.14); display: grid; gap: 8px; transition: transform .25s var(--ease); }
+.promo-card:hover { transform: translateY(-6px); }
+.promo-card span { font-size: 2rem; line-height: 1; }
+.promo-card h3 { margin: 0; font-family: var(--font-display); font-weight: 700; color: #b08457; }
+.promo-card p { margin: 0; font-weight: 600; }
+.promo-card:first-child { background: linear-gradient(135deg, #fff, #f7f0e9); border-color: #d7c0a9; }
+@media (min-width: 640px) { .promo-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .promo-grid { grid-template-columns: repeat(4, 1fr); } }
+
+.page[data-page="beranda"] .favorites { background: #fff; padding-bottom: 56px; }
+.page[data-page="beranda"] .link-arrow { color: #ba936c; }
+.page[data-page="beranda"] .menu-item__name { color: #735536; }
+.page[data-page="beranda"] .menu-item__price { color: #b08457; }
+.page[data-page="beranda"] .add-btn { background: linear-gradient(135deg, #d7c0a9, #ba936c); }
+.home-steps { background: #fff; }
+.hsteps li { border-color: #e0c9a4; }
+.hsteps__no { background: linear-gradient(135deg, #d7c0a9, #ba936c); }
+.hsteps b { color: #8a6641; }
+.home-why { background: linear-gradient(180deg, #fff, #f1dfc0); }
+.why-card h3 { color: #8a6641; }
+
+.page[data-page="beranda"] .class-card { background: linear-gradient(120deg, #f8e8cd, #f2e2c6); }
+.page[data-page="beranda"] .class-card__anim { background: linear-gradient(160deg, #f8e9cf, #eedcc0); display: grid; place-items: center; }
+.cakeart { width: min(78%, 250px); height: auto; position: relative; z-index: 1; overflow: visible; }
+.cakeart__bob { transform-box: fill-box; transform-origin: center bottom; animation: cakeBob 2.2s ease-in-out infinite; }
+.cakeart__flame { transform-box: fill-box; transform-origin: center bottom; animation: cakeFlame .5s ease-in-out infinite alternate; }
+.cakeart__eyes { transform-box: fill-box; transform-origin: center; animation: cakeBlink 3.8s infinite; }
+.cakeart__spark { animation: cakeSpark 1.6s ease-in-out infinite alternate; transform-box: fill-box; transform-origin: center; }
+@keyframes cakeBob { 0%, 100% { transform: translateY(0) rotate(-1.5deg); } 50% { transform: translateY(-9px) rotate(1.5deg); } }
+@keyframes cakeFlame { from { transform: scale(1, .92) rotate(-3deg); } to { transform: scale(.94, 1.1) rotate(3deg); } }
+@keyframes cakeBlink { 0%, 92%, 100% { transform: scaleY(1); } 95% { transform: scaleY(.1); } }
+@keyframes cakeSpark { from { opacity: .4; transform: scale(.8); } to { opacity: 1; transform: scale(1.15); } }
+
+/* Halaman Tentang: "Tiga langkah" jadi horizontal ke samping */
+.container.steps { display: grid; grid-template-columns: 1fr; gap: 20px; }
+.steps__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 20px; }
+@media (min-width: 760px) {
+  .steps__list { grid-template-columns: repeat(3, 1fr); }
+  .steps__list li { grid-template-columns: 1fr; row-gap: 12px; align-content: start; }
+  .steps__list .steps__num { grid-row: auto; }
+}
+.steps__list .steps__num { border: 0; color: #fff; background: linear-gradient(135deg, #d7c0a9, #ba936c); }
+.steps__list li:hover .steps__num { background: linear-gradient(135deg, #ba936c, #8a6641); }
+
+/* Footer: isi tambahan di bawah teks Nuvella (khusus saat beranda dibuka) */
+.footer__more { display: grid; gap: 14px; }
+.footer__brand { max-width: 30rem; }
+.footer__more { display: grid; gap: 14px; }
+.footer__more p { margin: 0; }
+.footer__tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.footer__tags span { padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.12); color: #fff; font-size: .8125rem; font-weight: 600; }
+.footer__links { display: flex; flex-wrap: wrap; gap: 8px 18px; }
+.footer__links a { color: #f6dfc9; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; }
+
+/* Beranda: Kenapa Nuvella / Tiga langkah / ajakan reservasi (warna rose) */
+.page[data-page="beranda"] .why { background: linear-gradient(180deg, #f7e8cf, #f4e4c8); padding-bottom: 56px; }
+.page[data-page="beranda"] .steps { background: #fff; padding-bottom: 56px; }
+.page[data-page="beranda"] .why .section-title, .page[data-page="beranda"] .steps .section-title { color: #8a6641; }
+.page[data-page="beranda"] .why .eyebrow, .page[data-page="beranda"] .steps .eyebrow { color: #ba936c; }
+.page[data-page="beranda"] .why__card h3, .page[data-page="beranda"] .steps__list h3 { color: #8a6641; }
+.page[data-page="beranda"] .why__card p, .page[data-page="beranda"] .steps__list p { color: #785839; font-weight: 600; }
+.page[data-page="beranda"] .why__card, .page[data-page="beranda"] .steps__list li { border-color: #e0c9a4; }
+.page[data-page="beranda"] .why__icon { background: linear-gradient(135deg, #f1d4a8, #e0c8a0); }
+.page[data-page="beranda"] .cta-band { margin-top: 0; background: linear-gradient(120deg, #d7c0a9, #ba936c); }
+.page[data-page="beranda"] .cta-band__btn { color: #b08457; }
+.page[data-page="beranda"] .cta-band__btn--ghost { color: #fff; }
+.page[data-page="beranda"] .cta-band p { color: #fff; }
+
+/* ===== Penyesuaian: tema coklat-cream, maskot besar & penuh, promo rata, footer ===== */
+.page[data-page="beranda"] .btn--primary, .banner .btn--primary { background: linear-gradient(135deg, #5a3b2a, #3d2a1f); box-shadow: 0 8px 20px rgba(61,42,31,.3); color: #fff; }
+.banner .btn--secondary { background: rgba(255,255,255,.85); border-color: #c9a27c; color: #3d2a1f; }
+.hsteps__no, .steps__list .steps__num { background: linear-gradient(135deg, #8a5a3c, #5a3b2a); }
+.steps__list li:hover .steps__num { background: #3d2a1f; }
+.page[data-page="beranda"] .add-btn { background: linear-gradient(135deg, #5a3b2a, #3d2a1f); }
+.page[data-page="beranda"] .cta-band { background: linear-gradient(120deg, #6b4a35, #3d2a1f); }
+.page[data-page="beranda"] .cta-band__btn { color: #3d2a1f; }
+.novella-home { padding: 48px clamp(16px, 5vw, 80px); background: linear-gradient(120deg, #f1dab2, #e4c797); }
+.novella-home__inner { display: grid; grid-template-columns: 1fr; gap: 28px; align-items: center; justify-items: center; width: 100%; }
+.mascot--home { width: clamp(230px, 62vw, 440px); }
+.novella-home__text { max-width: none; justify-items: start; }
+.novella-home__text .section-title { font-size: clamp(2rem, 4.5vw, 3.4rem); }
+.novella-home__text p { font-size: clamp(1.0625rem, 1.6vw, 1.3rem); }
+.home-bubble { font-size: 1.1rem !important; }
+@media (min-width: 860px) { .novella-home__inner { grid-template-columns: 1fr 1.25fr; gap: clamp(24px, 6vw, 96px); } .novella-home__text { padding-right: clamp(0px, 3vw, 48px); } }
+.promo-grid { grid-template-columns: 1fr; }
+@media (min-width: 860px) { .promo-grid { grid-template-columns: repeat(3, 1fr); } }
+.promo-card { align-content: start; grid-template-rows: auto auto 1fr auto; min-height: 230px; }
+.promo-card:first-child { background: #fff; border-color: #d8bf94; }
+.promo-card__code { justify-self: start; padding: 6px 14px; border-radius: 999px; background: #3d2a1f; color: #fff; font-size: .875rem; letter-spacing: .03em; }
+.footer__links { display: grid; grid-template-columns: repeat(2, max-content); gap: 10px 56px; }
+.page[data-page="beranda"] .menu-item__imgwrap { background: #f0dcb8; border-color: #d8bf94; }
+.page[data-page="beranda"] .menu-item__imgwrap svg { display: block; width: 100%; height: 100%; }
+.page[data-page="beranda"] .section-title, .novella-home__text .section-title, .banner__inner .display { color: #3d2a1f; }
+.page[data-page="beranda"] .eyebrow, .novella-home__text .eyebrow { color: #8a5a3c; }
+.promo-card h3, .why__card h3, .steps__list h3, .hsteps b, .page[data-page="beranda"] .menu-item__name { color: #3d2a1f !important; }
