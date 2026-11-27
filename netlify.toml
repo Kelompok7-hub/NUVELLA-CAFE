@@ -1,0 +1,32 @@
+# netlify.toml (letakkan di root proyek, sejajar dengan package.json / index.html)
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+
+    # --- Content Security Policy ---
+    # TAHAP 1: pakai "Content-Security-Policy-Report-Only" dulu untuk uji coba.
+    # TAHAP 2: setelah tidak ada error di Console, ganti nama header menjadi
+    #          "Content-Security-Policy".
+    Content-Security-Policy-Report-Only = """
+      default-src 'self';
+      script-src 'self' https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://unpkg.com;
+      style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net;
+      font-src 'self' data: https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+      img-src 'self' data: blob: https:;
+      connect-src 'self';
+      frame-src 'self';
+      object-src 'none';
+      base-uri 'self';
+      form-action 'self';
+      frame-ancestors 'self';
+      upgrade-insecure-requests
+    """
+
+    # --- Header keamanan lainnya ---
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()"
+    Strict-Transport-Security = "max-age=63072000; includeSubDomains; preload"
+    Cross-Origin-Opener-Policy = "same-origin"
